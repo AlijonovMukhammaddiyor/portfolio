@@ -8,10 +8,6 @@
 	background: transparent;
 	z-index: 100;
 
-	@include media_4 {
-		// background-color: $color_white;
-		// box-shadow: 0 0 10px $color_lightgray;
-	}
 	.nav_main {
 		@include flex;
 		padding: 1rem 0;

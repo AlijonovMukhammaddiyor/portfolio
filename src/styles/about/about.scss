@@ -1,10 +1,14 @@
 @import "../general/general.scss";
 
 .resume__container {
-	width: 72rem;
+	width: 75rem;
 	position: relative;
 	margin: auto;
-	padding-top: 5rem;
+	overflow: hidden;
+	margin: 8rem auto 5rem;
+	padding-bottom: 3rem;
+	border: 2px solid $color_dark;
+	position: relative;
 	@include media_1 {
 		width: 60rem;
 	}
@@ -33,7 +37,7 @@
 
 	hr {
 		position: absolute;
-		top: 13rem;
+		top: 10rem;
 		border: 0;
 		width: 100%;
 		height: 1px;
@@ -58,7 +62,7 @@
 		padding-left: 3rem;
 		left: -5rem;
 		text-align: center;
-		top: 3rem;
+		top: 0rem;
 
 		h1 {
 			margin: 0;
@@ -67,264 +71,23 @@
 	}
 
 	.resume {
-		@include flex($align: flex-start);
-		margin-top: 10rem;
+		@include flex($align: flex-start, $gap: 3rem);
+		max-width: 95%;
+		margin: auto;
+		margin-top: 12rem;
 
 		.edu_ach {
-			@include flex($direc: column, $gap: 4rem);
-		}
-		.title {
-			font-size: 1.5rem;
-			font-family: "Ubuntu";
-			text-align: left;
-			margin-bottom: 1rem;
-		}
-		.row_me {
-			@include flex();
-
-			.img_container {
-				overflow: hidden;
-				width: 19rem;
-				height: 19rem;
-				position: relative;
-
-				.about_img {
-					user-select: none;
-					-webkit-user-drag: none;
-					object-fit: contain;
-					width: 100%;
-					height: 100%;
-					// background-color: black;
-					// border-radius: 70% 20% 40% 50% / 90% 20% 60% 30%;
-				}
-			}
-
-			.education {
-				.data {
-					border-left: 2px solid $color_blue;
-					padding-left: 10px;
-					position: relative;
-					@include flex($direc: column, $jus: left, $align: flex-start);
-					.l_circle {
-						background-color: #fff;
-						height: 8px;
-						width: 8px;
-						position: absolute;
-						border-radius: 50%;
-						border: 1px solid $color_blue;
-					}
-					.connect {
-						position: absolute;
-						width: 10px;
-						height: 2px;
-						background-color: $color_blue;
-					}
-					.connect.first {
-						top: 33px;
-						left: 2px;
-					}
-
-					.connect.second {
-						top: 135px;
-						left: 2px;
-					}
-
-					.l_circle.first {
-						top: 30px;
-						left: -5px;
-					}
-
-					.l_circle.second {
-						top: 132px;
-						left: -5px;
-					}
-					.connect.third {
-						top: 462px;
-						left: 2px;
-					}
-
-					.l_circle.third {
-						top: 459px;
-						left: -5px;
-					}
-
-					.chonnam,
-					.kaist,
-					.other_courses {
-						@include flex($direc: column, $align: flex-start, $gap: auto);
-						padding: 1rem;
-						width: 100%;
-						border: 2px solid $color_blue;
-						// box-shadow: 0 0 5px $color_lightgray;
-						// height: 5rem;
-
-						.year_major {
-							@include flex($jus: left);
-							font-size: 0.9rem;
-
-							.major {
-								font-weight: 600;
-								font-size: 0.95rem;
-							}
-						}
-
-						.univ_name {
-							@include transition(0.2s);
-							cursor: pointer;
-							position: relative;
-							color: $color_blue;
-							font-weight: bold;
-
-							&::after {
-								content: "";
-								position: absolute;
-								width: 0;
-								height: 2px;
-								bottom: 0;
-								left: 0;
-								background-color: $color_dark;
-								transform-origin: 0 100%;
-								@include transition(0.3s);
-							}
-
-							&:hover::after {
-								width: 100%;
-							}
-							a {
-								text-decoration: none;
-								color: $color_blue;
-							}
-						}
-					}
-
-					.courses {
+			@include flex($direc: column);
+			flex-basis: 45%;
+			flex-grow: 1;
+			.row_me {
+				width: 100%;
+				.education {
+					.data {
+						border-left: 2px solid $color_blue;
+						padding-left: 10px;
 						position: relative;
-						ul {
-							padding-left: 1rem;
-							position: relative;
-							.course_code {
-								width: 5rem;
-							}
-						}
-
-						.title {
-							margin-top: 1rem;
-							font-size: 1rem;
-							font-weight: 500;
-							text-decoration: none;
-						}
-					}
-
-					.other_courses {
-						overflow: hidden;
-						height: 3.5rem;
-						@include transition(0.6s);
-						transition: background-color 0.1s ease;
-						&:hover {
-							background-color: $color_gray_text;
-							cursor: pointer;
-						}
-						.title {
-							font-size: 1rem;
-							font-weight: 500;
-
-							.click {
-								font-weight: lighter;
-								font-size: small;
-								color: $color_hover;
-							}
-						}
-
-						.courses {
-							@include flex($direc: column, $align: left);
-							.course {
-								a.course_name {
-									text-decoration: none;
-									color: $color_dark;
-									font-weight: 600;
-									cursor: pointer;
-									position: relative;
-									&::after {
-										content: "";
-										position: absolute;
-										width: 0;
-										height: 2px;
-										bottom: 0;
-										left: 0;
-										background-color: $color_dark;
-										transform-origin: 0 100%;
-										@include transition(0.3s);
-									}
-
-									&:hover::after {
-										width: 100%;
-									}
-								}
-								.details {
-									color: $color_gray_text;
-									@include flex($jus: left);
-									p {
-										font-weight: 500;
-										margin-bottom: 10px;
-									}
-								}
-							}
-						}
-					}
-					.show {
-						height: 20rem;
-						@include transition(0.6s);
-
-						.title {
-							.click {
-								display: none;
-							}
-						}
-						&:hover {
-							background-color: white;
-							cursor: auto;
-						}
-					}
-				}
-			}
-		}
-
-		.row_sketch {
-			@include flex();
-
-			.about_msg {
-				.languages {
-					position: relative;
-					padding-left: 10px;
-					border-left: 2px solid $color_blue;
-
-					ul {
-						padding-left: 1rem;
-						columns: 2;
-						list-style: none;
-					}
-
-					h3 {
-						font-family: "Forum";
-						font-family: bold;
-						font-size: 1.3rem;
-						color: $color_blue;
-						margin-bottom: 10px;
-						.degree {
-							font-size: 0.9rem;
-							font-weight: lighter;
-							color: $color_hover;
-						}
-					}
-
-					.language {
-						padding: 1rem;
-						width: 35rem;
-						border: 2px solid $color_blue;
-						margin-bottom: 1rem;
-						position: relative;
-						// border-radius: 10px;
-
+						@include flex($direc: column, $jus: left, $align: flex-start);
 						.l_circle {
 							background-color: #fff;
 							height: 8px;
@@ -332,449 +95,249 @@
 							position: absolute;
 							border-radius: 50%;
 							border: 1px solid $color_blue;
-							left: -17px;
-							top: 23px;
 						}
-
 						.connect {
 							position: absolute;
 							width: 10px;
 							height: 2px;
 							background-color: $color_blue;
-							top: 26px;
-							left: -10px;
+						}
+						.connect.first {
+							top: 33px;
+							left: 2px;
 						}
 
-						.other_parts {
-							.others_title {
-								font-weight: bold;
-								margin: 1rem 0 0 1rem;
-							}
-							ul {
-								columns: 3;
-								list-style: disc;
-								margin-left: 1rem;
-							}
+						.connect.second {
+							top: 135px;
+							left: 2px;
 						}
 
-						.skill_measure {
+						.l_circle.first {
+							top: 30px;
+							left: -5px;
+						}
+
+						.l_circle.second {
+							top: 132px;
+							left: -5px;
+						}
+						.connect.third {
+							top: 493px;
+							left: 2px;
+						}
+
+						.l_circle.third {
+							top: 490px;
+							left: -5px;
+						}
+
+						.chonnam,
+						.kaist,
+						.other_courses {
+							@include flex($direc: column, $align: flex-start, $gap: auto);
+							padding: 1rem;
+							width: 100%;
+							border: 2px solid $color_blue;
 							position: relative;
-							// @include flex($jus: left);
 
-							.library {
-								@include flex($align: flex-end);
-								.degree {
-									font-size: 0.8rem;
-									color: $color_hover;
+							.year_major {
+								@include flex($jus: left);
+								font-size: 0.9rem;
+
+								.major {
+									font-weight: 600;
+									font-size: 0.95rem;
 								}
 							}
 
-							.progress_bar_default {
-								height: 7px;
-
-								// border-radius: 10px;
-								width: 100%;
-								background-color: $color_lightgray;
-							}
-
-							.progress_bar {
-								position: absolute;
-								background-color: $color_blue;
-								height: 7px;
-								// border-radius: 10px;
-								bottom: 0;
-								width: 0;
+							.univ_name {
+								@include transition(0.2s);
 								cursor: pointer;
-							}
+								position: relative;
+								color: $color_blue;
+								font-weight: bold;
 
-							.progress_bar.node {
-								width: 60%;
-							}
+								&::after {
+									content: "";
+									position: absolute;
+									width: 0;
+									height: 2px;
+									bottom: 0;
+									left: 0;
+									background-color: $color_dark;
+									transform-origin: 0 100%;
+									@include transition(0.3s);
+								}
 
-							.progress_bar.react {
-								width: 90%;
-							}
-
-							.progress_bar.express {
-								width: 90%;
-							}
-
-							.progress_bar.router {
-								width: 60%;
-							}
-
-							.progress_bar.redux {
-								width: 40%;
-							}
-
-							.progress_bar.mongoose {
-								width: 90%;
-							}
-
-							.progress_bar.pytorch {
-								width: 50%;
-							}
-							.progress_bar.pygame {
-								width: 60%;
-							}
-							.progress_bar.numpy {
-								width: 70%;
-							}
-							.progress_bar.pandas {
-								width: 70%;
-							}
-							.progress_bar.sql {
-								width: 80%;
-							}
-							.progress_bar.mongo {
-								width: 60%;
-							}
-							.progress_bar.html {
-								width: 95%;
-							}
-							.progress_bar.css {
-								width: 95%;
-							}
-						}
-
-						.desc {
-							color: $color_gray_text;
-						}
-
-						.libraries {
-							margin-top: 1rem;
-
-							.library_logo {
-								width: 5rem;
-								height: 2rem;
-								margin: 10px 0 0 0;
-								object-fit: contain;
-								cursor: pointer;
-								-webkit-user-drag: none;
-							}
-
-							.library_logo.html {
-								height: 2.8rem;
-								margin-bottom: 3px;
-								width: auto;
-							}
-							.library_logo.css {
-								height: 2.8rem;
-								width: auto;
-								margin-bottom: 3px;
-							}
-
-							.library_logo.router {
-								margin-bottom: 5px;
-							}
-							.library_logo.sql {
-								height: 2.5rem;
-								margin-bottom: 3px;
-								margin-top: 0px;
-							}
-						}
-
-						.lan {
-							position: relative;
-
-							.line {
-								position: absolute;
-								width: 87%;
-								height: 2px;
-								background-color: $color_blue;
-								right: 0;
-								top: 13px;
-							}
-						}
-					}
-				}
-			}
-			.img_container {
-				overflow: hidden;
-				width: 22rem;
-				height: 22rem;
-				position: relative;
-				margin-top: -10rem;
-
-				.about_img {
-					user-select: none;
-					-webkit-user-drag: none;
-					object-fit: contain;
-					width: 100%;
-					height: 100%;
-					// background-color: black;
-					// border-radius: 70% 20% 40% 50% / 90% 20% 60% 30%;
-				}
-			}
-		}
-
-		.achievements {
-			@include flex;
-
-			.img_container {
-				overflow: hidden;
-				width: 19rem;
-				height: 19rem;
-				position: relative;
-
-				.achieve_img {
-					user-select: none;
-					-webkit-user-drag: none;
-					object-fit: contain;
-					width: 100%;
-					height: 100%;
-				}
-			}
-
-			.data_container {
-				.data {
-					position: relative;
-					padding-left: 10px;
-					border-left: 2px solid $color_blue;
-				}
-
-				.achievement {
-					@include flex($gap: 0, $direc: column, $align: left);
-					padding: 1rem;
-					width: 35rem;
-					border: 2px solid $color_blue;
-					margin-bottom: 1rem;
-					position: relative;
-					.l_circle {
-						background-color: #fff;
-						height: 8px;
-						width: 8px;
-						position: absolute;
-						border-radius: 50%;
-						border: 1px solid $color_blue;
-						top: 25px;
-						left: -17px;
-					}
-					.connect {
-						position: absolute;
-						width: 10px;
-						height: 2px;
-						background-color: $color_blue;
-						top: 27.5px;
-						left: -10px;
-					}
-
-					.title {
-						margin-bottom: 0;
-						color: $color_blue;
-
-						.among {
-							font-size: 1.1rem;
-							color: $color_hover;
-						}
-					}
-					.details {
-						@include flex($jus: left);
-						.date {
-							font-size: 0.9rem;
-						}
-						.place {
-							font-size: 0.9rem;
-							font-weight: 600;
-						}
-					}
-				}
-			}
-		}
-
-		.row_me {
-			.education {
-				.data {
-					border-left: 2px solid $color_dark;
-					padding-left: 10px;
-					position: relative;
-					@include flex($direc: column, $jus: left, $align: flex-start);
-
-					.l_circle {
-						background-color: #fff;
-						height: 8px;
-						width: 8px;
-						position: absolute;
-						border-radius: 50%;
-						border: 1px solid $color_blue;
-					}
-					.connect {
-						position: absolute;
-						width: 10px;
-						height: 2px;
-						background-color: $color_blue;
-					}
-					.connect.first {
-						top: 33px;
-						left: 2px;
-					}
-
-					.connect.second {
-						top: 135px;
-						left: 2px;
-					}
-
-					.l_circle.first {
-						top: 30px;
-						left: -5px;
-					}
-
-					.l_circle.second {
-						top: 132px;
-						left: -5px;
-					}
-					.connect.third {
-						top: 458px;
-						left: 2px;
-					}
-
-					.l_circle.third {
-						top: 455px;
-						left: -5px;
-					}
-
-					.chonnam,
-					.kaist,
-					.other_courses {
-						@include flex($direc: column, $align: flex-start, $gap: auto);
-						padding: 1rem;
-						width: 100%;
-						border: 2px solid $color_dark;
-
-						.year_major {
-							@include flex($jus: left);
-							font-size: 0.8rem;
-							color: $color_text_secondary;
-
-							.major {
-								font-weight: 700;
-								font-size: 0.95rem;
-							}
-						}
-
-						.univ_name {
-							@include transition(0.2s);
-							cursor: pointer;
-							position: relative;
-							color: $color_dark;
-							font-weight: 700;
-
-							&::after {
-								content: "";
-								position: absolute;
-								width: 0;
-								height: 2px;
-								bottom: 0;
-								left: 0;
-								background-color: $color_dark;
-								transform-origin: 0 100%;
-								@include transition(0.3s);
-							}
-
-							&:hover::after {
-								width: 100%;
-							}
-							a {
-								font-size: 1.3rem;
-								text-decoration: none;
-								color: $color_dark;
-								font-weight: 700;
-							}
-						}
-					}
-
-					.courses {
-						position: relative;
-						ul {
-							padding-left: 1rem;
-							position: relative;
-							.course_code {
-								width: 5rem;
-							}
-						}
-
-						.title {
-							margin-top: 1rem;
-							font-size: 1rem;
-							font-weight: 500;
-							text-decoration: none;
-						}
-					}
-
-					.other_courses {
-						overflow: hidden;
-						height: 3.5rem;
-						@include transition(0.6s);
-						&:hover {
-							background-color: $color_back;
-							cursor: pointer;
-						}
-						.title {
-							font-size: 1rem;
-							font-weight: 500;
-
-							.click {
-								font-weight: lighter;
-								font-size: small;
-								color: $color_hover;
+								&:hover::after {
+									width: 100%;
+								}
+								a {
+									text-decoration: none;
+									color: $color_blue;
+								}
 							}
 						}
 
 						.courses {
-							@include flex($direc: column, $align: left);
-							.course {
-								a.course_name {
-									text-decoration: none;
-									color: $color_dark;
-									font-weight: 600;
-									cursor: pointer;
-									position: relative;
-									&::after {
-										content: "";
-										position: absolute;
-										width: 0;
-										height: 2px;
-										bottom: 0;
-										left: 0;
-										background-color: $color_dark;
-										transform-origin: 0 100%;
-										@include transition(0.3s);
-									}
+							position: relative;
+							ul {
+								padding-left: 1rem;
+								position: relative;
+								.course_code {
+									width: 5rem;
+								}
+							}
 
-									&:hover::after {
-										width: 100%;
+							.title {
+								margin-top: 1rem;
+								font-size: 1rem;
+								font-weight: 500;
+								text-decoration: none;
+							}
+						}
+
+						.other_courses {
+							overflow: hidden;
+							height: 3.5rem;
+							@include transition(0.6s);
+							transition: background-color 0.1s ease;
+							&:hover {
+								background-color: $color_gray_text;
+								cursor: pointer;
+							}
+							.title {
+								font-size: 1rem;
+								font-weight: 500;
+
+								.click {
+									font-weight: lighter;
+									font-size: small;
+									color: $color_hover;
+								}
+							}
+
+							.courses {
+								@include flex($direc: column, $align: left);
+								.course {
+									a.course_name {
+										text-decoration: none;
+										color: $color_dark;
+										font-weight: 600;
+										cursor: pointer;
+										position: relative;
+										&::after {
+											content: "";
+											position: absolute;
+											width: 0;
+											height: 2px;
+											bottom: 0;
+											left: 0;
+											background-color: $color_dark;
+											transform-origin: 0 100%;
+											@include transition(0.3s);
+										}
+
+										&:hover::after {
+											width: 100%;
+										}
+									}
+									.details {
+										color: $color_gray_text;
+										@include flex($jus: left);
+										p {
+											font-weight: 500;
+											margin-bottom: 10px;
+										}
 									}
 								}
-								.details {
-									color: $color_gray_text;
-									@include flex($jus: left);
-									p {
-										font-weight: 500;
-										margin-bottom: 10px;
-									}
+							}
+						}
+						.show {
+							height: 20rem;
+							@include transition(0.6s);
+
+							.title {
+								.click {
+									display: none;
 								}
+							}
+							&:hover {
+								background-color: white;
+								cursor: auto;
 							}
 						}
 					}
-					.show {
-						height: 20rem;
-						@include transition(0.6s);
-
-						.title {
-							.click {
-								display: none;
+				}
+			}
+			.achievements {
+				width: 100%;
+				.data_container {
+					.data {
+						border-left: 2px solid $color_blue;
+						padding-left: 10px;
+						position: relative;
+						@include flex($direc: column, $align: flex-start);
+						.achievement {
+							width: 100%;
+							padding: 1rem;
+							border: 2px solid $color_dark;
+							position: relative;
+							.l_circle {
+								background-color: #fff;
+								height: 8px;
+								width: 8px;
+								position: absolute;
+								border-radius: 50%;
+								border: 1px solid $color_blue;
+								top: 25px;
+								left: -17px;
 							}
-						}
-						&:hover {
-							background-color: white;
-							cursor: auto;
+							.connect {
+								position: absolute;
+								width: 10px;
+								height: 2px;
+								background-color: $color_blue;
+								top: 27.5px;
+								left: -10px;
+							}
+
+							.title {
+								margin-bottom: 0;
+								color: $color_dark;
+								font-size: 1.2rem;
+
+								.among {
+									font-size: 1.1rem;
+									color: $color_hover;
+								}
+							}
+							.details {
+								@include flex($jus: left);
+								.date {
+									font-size: 0.9rem;
+								}
+								.place {
+									font-size: 0.9rem;
+									font-weight: 600;
+								}
+							}
 						}
 					}
 				}
 			}
 		}
+		.title {
+			font-size: 1.2rem;
+			font-family: "Ubuntu";
+			text-align: left;
+			color: $color_dark;
+			margin-bottom: 1rem;
+		}
 
 		.row_sketch {
+			flex-grow: 1;
+			flex-basis: 45%;
 			.about_msg {
 				.languages {
 					position: relative;
@@ -792,7 +355,7 @@
 
 					.language {
 						padding: 1rem;
-						width: 35rem;
+						width: 100%;
 						border: 2px solid $color_dark;
 						margin-bottom: 1rem;
 						position: relative;
@@ -864,7 +427,7 @@
 
 							.progress_bar {
 								position: absolute;
-								background-color: $color_blue;
+								background-color: $color_dark;
 								height: 7px;
 								// border-radius: 10px;
 								bottom: 0;
@@ -970,80 +533,6 @@
 								right: 0;
 								top: 13px;
 							}
-						}
-					}
-				}
-			}
-		}
-
-		.achievements {
-			@include flex;
-
-			.img_container {
-				overflow: hidden;
-				width: 19rem;
-				height: 19rem;
-				position: relative;
-
-				.achieve_img {
-					user-select: none;
-					-webkit-user-drag: none;
-					object-fit: contain;
-					width: 100%;
-					height: 100%;
-				}
-			}
-
-			.data_container {
-				.data {
-					position: relative;
-					padding-left: 10px;
-					border-left: 2px solid $color_blue;
-				}
-
-				.achievement {
-					@include flex($gap: 0, $direc: column, $align: left);
-					padding: 1rem;
-					width: 35rem;
-					border: 2px solid $color_blue;
-					margin-bottom: 1rem;
-					position: relative;
-					.l_circle {
-						background-color: #fff;
-						height: 8px;
-						width: 8px;
-						position: absolute;
-						border-radius: 50%;
-						border: 1px solid $color_blue;
-						top: 25px;
-						left: -17px;
-					}
-					.connect {
-						position: absolute;
-						width: 10px;
-						height: 2px;
-						background-color: $color_blue;
-						top: 27.5px;
-						left: -10px;
-					}
-
-					.title {
-						margin-bottom: 0;
-						color: $color_blue;
-
-						.among {
-							font-size: 1.1rem;
-							color: $color_hover;
-						}
-					}
-					.details {
-						@include flex($jus: left);
-						.date {
-							font-size: 0.9rem;
-						}
-						.place {
-							font-size: 0.9rem;
-							font-weight: 600;
 						}
 					}
 				}

@@ -4,8 +4,18 @@ $color_dark: hsl(207, 10%, 13%);
 $color_white: #fff;
 $color_back: #f4f4f4;
 $color_lightgray: lightgray;
-$color_gray_text: gray;
+$color_gray_text: hsl(0, 0%, 50%);
 $color_text_secondary: hsl(0, 0%, 30%);
+
+$light_bold_color: hsl(207, 10%, 13%);
+$light_text_color: hsl(0, 0%, 30%);
+$light_text_color_secondary: hsl(0, 0%, 50%);
+$light_hover: #284b63;
+
+$dark_bold_color: hsl(0, 0%, 100%);
+$dark_text_color: hsl(0, 0%, 90%);
+$dark_hover: hsl(50, 21%, 95%);
+$dark_text_color_secondary: hsl(0, 0%, 85%);
 
 $breakpoint_1: 1200px;
 $breakpoint_2: 992px;

@@ -44,9 +44,9 @@ const About = () => {
 								<div className="connect"></div>
 								<h3>Javascript</h3>
 								<p className="desc">
-									I love Javascript ! It is a very creative language. During the past 1.5 half
-									years, It has been my primary language, working for around 5-6 hours a day with
-									it. Some related frameworks and libaries I have learned include the following:
+									I love Javascript ! It is a creative language. During the past 1.5 half years, It
+									has been my primary language, working for around 5-6 hours a day with it. Some
+									related frameworks and libaries I have learned include the following:
 								</p>
 								<div className="libraries">
 									<ul>
