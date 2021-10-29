@@ -4,6 +4,7 @@ import Home from "./components/home/Home";
 import About from "./components/About/About";
 import "./styles/app/app.css";
 import Footer from "./components/footer/Footer";
+import Projects from "./components/Project/Projects";
 
 export default function App() {
 	return (

@@ -42,13 +42,11 @@ const About = () => {
 							<div className="language javascript">
 								<div className="l_circle javascript"></div>
 								<div className="connect"></div>
-								<h3>
-									Javascript - <span className="degree">Advanced</span>
-								</h3>
+								<h3>Javascript</h3>
 								<p className="desc">
 									I love Javascript ! It is a very creative language. During the past 1.5 half
-									years, It has been my primary language, spending at least 5-6 hours a day on it.
-									Some related frameworks and libaries I have learned include the following:
+									years, It has been my primary language, working for around 5-6 hours a day with
+									it. Some related frameworks and libaries I have learned include the following:
 								</p>
 								<div className="libraries">
 									<ul>
@@ -130,9 +128,7 @@ const About = () => {
 								<div className="l_circle python"></div>
 								<div className="connect"></div>
 								<div className="lan">
-									<h3>
-										Python - <span className="degree">Advanced</span>
-									</h3>
+									<h3>Python</h3>
 								</div>
 
 								<p className="desc">
@@ -249,9 +245,7 @@ const About = () => {
 							<div className="language others">
 								<div className="l_circle others"></div>
 								<div className="connect"></div>
-								<h3>
-									Java, C, C++, Haskell - <span className="degree">Intermediate</span>
-								</h3>
+								<h3>Java, C, C++, Haskell</h3> <span className="degree_span">Intermediate</span>
 								<p className="desc">
 									These languages are the ones I have learned quite well when I took the courses at
 									KAIST. Since C++ was my first and favourite language, I am quite good at Java and
