@@ -41,8 +41,8 @@
 			position: relative;
 			z-index: 100;
 			.m_icon {
-				width: 32px;
-				height: 32px;
+				width: 38px;
+				height: 38px;
 				object-fit: cover;
 				-webkit-user-drag: none;
 				user-select: none;
@@ -63,14 +63,14 @@
 				display: none;
 			}
 			a {
-				color: $color_dark;
+				color: $dark_bold_color;
 				text-decoration: none;
 				font-size: 1.2rem;
 				@include transition(0.2s);
 				cursor: pointer;
 
 				&:hover {
-					color: $color_hover;
+					color: $dark_hover;
 					transform: scale(1.3);
 				}
 
@@ -83,9 +83,11 @@
 		.nav_icons {
 			@include flex;
 			.icon {
-				font-size: 1.2rem;
+				font-size: 1.5rem;
+				border-radius: 5px;
 				transition: all 0.2s linear;
 				cursor: pointer;
+				color: white;
 
 				&:hover {
 					transform: scale(1.5);
@@ -93,20 +95,29 @@
 			}
 
 			.linkedin {
-				color: #0077b5;
+				&:hover {
+					color: #0077b5;
+				}
+
 				// margin-left: 20rem;
 			}
 
 			.facebook {
-				color: #3b5998;
+				&:hover {
+					color: #3b5998;
+				}
 			}
 
 			.github {
-				color: hsl(274, 78%, 29%);
+				&:hover {
+					color: hsl(274, 78%, 29%);
+				}
 			}
 
 			.telegram {
-				color: #0088cc;
+				&:hover {
+					color: #0088cc;
+				}
 			}
 		}
 		// }
@@ -198,8 +209,8 @@
 
 .stick {
 	position: fixed;
-	background-color: $color_white;
-	box-shadow: 0 0 10px $color_lightgray;
+	background-color: black;
+	border-bottom: $dark_text_color_secondary;
 }
 
 .down {
@@ -215,5 +226,5 @@
 }
 
 .nav.stick {
-	background-color: #0077b5;
+	background-color: black;
 }

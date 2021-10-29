@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect } from "react";
 import "../../styles/navbar/navbar.css";
-import m_icon from "../../assets/m_icon-removebg-preview.png";
-import { FaGithub, FaLinkedinIn, FaFacebookF, FaTelegram } from "react-icons/fa";
+import m_icon from "../../assets/m_logo-removebg-preview (1).png";
+import { FaGithub, FaLinkedin, FaFacebook, FaTelegram } from "react-icons/fa";
 
 export default function Navbar() {
 	const [stick, setStick] = useState(false);
@@ -81,9 +81,9 @@ export default function Navbar() {
 						</a>
 					</div>
 					<div className="nav_icons">
-						<FaLinkedinIn className="icon linkedin" />
+						<FaLinkedin className="icon linkedin" />
 						<FaGithub className="icon github" />
-						<FaFacebookF className="icon  facebook" />
+						<FaFacebook className="icon  facebook" />
 						<FaTelegram className="icon telegram" />
 						<div className={open ? "menu-btn open" : "menu-btn"} onClick={handleMenu}>
 							<div className="burger"></div>
