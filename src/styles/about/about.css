@@ -13,14 +13,20 @@ body {
 }
 
 .resume__container {
-  width: 75rem;
+  width: 78rem;
   position: relative;
   margin: auto;
   overflow: hidden;
   margin: 8rem auto 5rem;
   padding-bottom: 3rem;
-  border: 2px solid white;
+  border: 2px solid #1e2124;
   position: relative;
+}
+
+@media (max-width: 1300px) {
+  .resume__container {
+    width: 72rem;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -43,17 +49,6 @@ body {
 
 @media (max-width: 768px) {
   .resume__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    gap: 0;
-    margin-top: 8rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 4rem;
-    height: 90vh;
     width: 38rem;
   }
 }
@@ -70,8 +65,26 @@ body {
   border: 0;
   width: 100%;
   height: 1px;
-  background-image: -webkit-gradient(linear, left top, right top, from(black), color-stop(rgba(255, 255, 255, 0)), to(black));
-  background-image: linear-gradient(to right, black, rgba(255, 255, 255, 0), black);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+}
+
+@media (max-width: 768px) {
+  .resume__container hr {
+    top: 8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .resume__container hr {
+    top: 6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .resume__container hr {
+    top: 5rem;
+  }
 }
 
 .resume__container .backscript {
@@ -91,6 +104,31 @@ body {
   top: 0rem;
 }
 
+@media (max-width: 992px) {
+  .resume__container .backscript {
+    left: -2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume__container .backscript {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .resume__container .backscript {
+    left: -2rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .resume__container .backscript {
+    font-size: 2rem;
+  }
+}
+
 .resume__container .backscript h1 {
   margin: 0;
   padding: 0;
@@ -104,7 +142,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 3rem;
+  gap: 1rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -114,6 +152,33 @@ body {
   max-width: 95%;
   margin: auto;
   margin-top: 12rem;
+}
+
+@media (max-width: 992px) {
+  .resume__container .resume {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume__container .resume {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume {
+    margin-top: 9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .resume__container .resume {
+    margin-top: 8rem;
+  }
 }
 
 .resume__container .resume .edu_ach {
@@ -131,11 +196,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
 }
 
 .resume__container .resume .edu_ach .row_me {
@@ -143,7 +205,7 @@ body {
 }
 
 .resume__container .resume .edu_ach .row_me .education .data {
-  border-left: 2px solid #2a4e50;
+  border-left: 2px solid #1e2124;
   padding-left: 10px;
   position: relative;
   display: -webkit-box;
@@ -168,44 +230,18 @@ body {
   width: 8px;
   position: absolute;
   border-radius: 50%;
-  border: 1px solid #2a4e50;
+  border: 1px solid #1e2124;
+  top: 18px;
+  left: -17px;
 }
 
 .resume__container .resume .edu_ach .row_me .education .data .connect {
   position: absolute;
   width: 10px;
   height: 2px;
-  background-color: #2a4e50;
-}
-
-.resume__container .resume .edu_ach .row_me .education .data .connect.first {
-  top: 33px;
-  left: 2px;
-}
-
-.resume__container .resume .edu_ach .row_me .education .data .connect.second {
-  top: 135px;
-  left: 2px;
-}
-
-.resume__container .resume .edu_ach .row_me .education .data .l_circle.first {
-  top: 30px;
-  left: -5px;
-}
-
-.resume__container .resume .edu_ach .row_me .education .data .l_circle.second {
-  top: 132px;
-  left: -5px;
-}
-
-.resume__container .resume .edu_ach .row_me .education .data .connect.third {
-  top: 493px;
-  left: 2px;
-}
-
-.resume__container .resume .edu_ach .row_me .education .data .l_circle.third {
-  top: 490px;
-  left: -5px;
+  background-color: #1e2124;
+  top: 21px;
+  left: -10px;
 }
 
 .resume__container .resume .edu_ach .row_me .education .data .chonnam,
@@ -225,9 +261,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1rem;
+  padding: 5px 10px 10px;
   width: 100%;
-  border: 2px solid #2a4e50;
+  border: 2px solid #1e2124;
   position: relative;
 }
 
@@ -248,7 +284,17 @@ body {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .chonnam .year_major,
+  .resume__container .resume .edu_ach .row_me .education .data .kaist .year_major,
+  .resume__container .resume .edu_ach .row_me .education .data .other_courses .year_major {
+    font-size: 12px;
+    gap: 10px;
+    margin-top: 4px;
+  }
 }
 
 .resume__container .resume .edu_ach .row_me .education .data .chonnam .year_major .major,
@@ -258,6 +304,14 @@ body {
   font-size: 0.95rem;
 }
 
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .chonnam .year_major .major,
+  .resume__container .resume .edu_ach .row_me .education .data .kaist .year_major .major,
+  .resume__container .resume .edu_ach .row_me .education .data .other_courses .year_major .major {
+    font-size: 14px;
+  }
+}
+
 .resume__container .resume .edu_ach .row_me .education .data .chonnam .univ_name,
 .resume__container .resume .edu_ach .row_me .education .data .kaist .univ_name,
 .resume__container .resume .edu_ach .row_me .education .data .other_courses .univ_name {
@@ -265,7 +319,7 @@ body {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   position: relative;
-  color: #2a4e50;
+  color: #1e2124;
   font-weight: bold;
 }
 
@@ -285,6 +339,14 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .chonnam .univ_name::after,
+  .resume__container .resume .edu_ach .row_me .education .data .kaist .univ_name::after,
+  .resume__container .resume .edu_ach .row_me .education .data .other_courses .univ_name::after {
+    display: none;
+  }
+}
+
 .resume__container .resume .edu_ach .row_me .education .data .chonnam .univ_name:hover::after,
 .resume__container .resume .edu_ach .row_me .education .data .kaist .univ_name:hover::after,
 .resume__container .resume .edu_ach .row_me .education .data .other_courses .univ_name:hover::after {
@@ -295,7 +357,37 @@ body {
 .resume__container .resume .edu_ach .row_me .education .data .kaist .univ_name a,
 .resume__container .resume .edu_ach .row_me .education .data .other_courses .univ_name a {
   text-decoration: none;
-  color: #2a4e50;
+  color: #1e2124;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .chonnam .univ_name a,
+  .resume__container .resume .edu_ach .row_me .education .data .kaist .univ_name a,
+  .resume__container .resume .edu_ach .row_me .education .data .other_courses .univ_name a {
+    font-size: 1.1rem;
+  }
+}
+
+.resume__container .resume .edu_ach .row_me .education .data .chonnam .univ_name h2,
+.resume__container .resume .edu_ach .row_me .education .data .kaist .univ_name h2,
+.resume__container .resume .edu_ach .row_me .education .data .other_courses .univ_name h2 {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .chonnam .univ_name h2,
+  .resume__container .resume .edu_ach .row_me .education .data .kaist .univ_name h2,
+  .resume__container .resume .edu_ach .row_me .education .data .other_courses .univ_name h2 {
+    line-height: 1rem;
+  }
+}
+
+.resume__container .resume .edu_ach .row_me .education .data .chonnam .univ_name a.kaist_abr,
+.resume__container .resume .edu_ach .row_me .education .data .kaist .univ_name a.kaist_abr,
+.resume__container .resume .edu_ach .row_me .education .data .other_courses .univ_name a.kaist_abr {
+  display: none;
 }
 
 .resume__container .resume .edu_ach .row_me .education .data .courses {
@@ -311,30 +403,36 @@ body {
   width: 5rem;
 }
 
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .courses ul {
+    font-size: 14px;
+  }
+}
+
 .resume__container .resume .edu_ach .row_me .education .data .courses .title {
   margin-top: 1rem;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
   text-decoration: none;
 }
 
-.resume__container .resume .edu_ach .row_me .education .data .other_courses {
-  overflow: hidden;
-  height: 3.5rem;
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
-  -webkit-transition: background-color 0.1s ease;
-  transition: background-color 0.1s ease;
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .courses .title {
+    font-size: 0.9rem;
+  }
 }
 
-.resume__container .resume .edu_ach .row_me .education .data .other_courses:hover {
-  background-color: gray;
-  cursor: pointer;
+.resume__container .resume .edu_ach .row_me .education .data .other_courses .l_circle {
+  top: 12px;
+}
+
+.resume__container .resume .edu_ach .row_me .education .data .other_courses .connect {
+  top: 15px;
 }
 
 .resume__container .resume .edu_ach .row_me .education .data .other_courses .title {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .resume__container .resume .edu_ach .row_me .education .data .other_courses .title .click {
@@ -382,6 +480,12 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .other_courses .courses .course a.course_name::after {
+    display: none;
+  }
+}
+
 .resume__container .resume .edu_ach .row_me .education .data .other_courses .courses .course a.course_name:hover::after {
   width: 100%;
 }
@@ -404,24 +508,21 @@ body {
           justify-content: left;
 }
 
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .other_courses .courses .course .details {
+    gap: 10px;
+  }
+}
+
 .resume__container .resume .edu_ach .row_me .education .data .other_courses .courses .course .details p {
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-.resume__container .resume .edu_ach .row_me .education .data .show {
-  height: 20rem;
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
-}
-
-.resume__container .resume .edu_ach .row_me .education .data .show .title .click {
-  display: none;
-}
-
-.resume__container .resume .edu_ach .row_me .education .data .show:hover {
-  background-color: white;
-  cursor: auto;
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .row_me .education .data .other_courses .courses .course .details p {
+    font-size: 13px;
+  }
 }
 
 .resume__container .resume .edu_ach .achievements {
@@ -429,7 +530,7 @@ body {
 }
 
 .resume__container .resume .edu_ach .achievements .data_container .data {
-  border-left: 2px solid #2a4e50;
+  border-left: 2px solid #1e2124;
   padding-left: 10px;
   position: relative;
   display: -webkit-box;
@@ -450,7 +551,7 @@ body {
 
 .resume__container .resume .edu_ach .achievements .data_container .data .achievement {
   width: 100%;
-  padding: 1rem;
+  padding: 5px 10px 10px;
   border: 2px solid #1e2124;
   position: relative;
 }
@@ -461,7 +562,7 @@ body {
   width: 8px;
   position: absolute;
   border-radius: 50%;
-  border: 1px solid #2a4e50;
+  border: 1px solid #1e2124;
   top: 25px;
   left: -17px;
 }
@@ -470,7 +571,7 @@ body {
   position: absolute;
   width: 10px;
   height: 2px;
-  background-color: #2a4e50;
+  background-color: #1e2124;
   top: 27.5px;
   left: -10px;
 }
@@ -479,11 +580,24 @@ body {
   margin-bottom: 0;
   color: #1e2124;
   font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .achievements .data_container .data .achievement .title {
+    font-size: 1rem;
+  }
 }
 
 .resume__container .resume .edu_ach .achievements .data_container .data .achievement .title .among {
   font-size: 1.1rem;
-  color: #284b63;
+  color: #1e2124;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .achievements .data_container .data .achievement .title .among {
+    font-size: 14px;
+  }
 }
 
 .resume__container .resume .edu_ach .achievements .data_container .data .achievement .details {
@@ -503,8 +617,20 @@ body {
           justify-content: left;
 }
 
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .achievements .data_container .data .achievement .details {
+    gap: 10px;
+  }
+}
+
 .resume__container .resume .edu_ach .achievements .data_container .data .achievement .details .date {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .achievements .data_container .data .achievement .details .date {
+    font-size: 12px;
+  }
 }
 
 .resume__container .resume .edu_ach .achievements .data_container .data .achievement .details .place {
@@ -512,96 +638,281 @@ body {
   font-weight: 600;
 }
 
-.resume__container .resume .title {
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .achievements .data_container .data .achievement .details .place {
+    font-size: 13px;
+  }
+}
+
+.resume__container .resume .edu_ach .work .l_circle {
+  background-color: #fff;
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #1e2124;
+  top: 18px;
+  left: -17px;
+}
+
+.resume__container .resume .edu_ach .work .connect {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #1e2124;
+  top: 21px;
+  left: -10px;
+}
+
+.resume__container .resume .edu_ach .work .data {
+  padding-left: 10px;
+  border-left: 2px solid #1e2124;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.resume__container .resume .edu_ach .work .data .ta {
+  border: 2px solid #1e2124;
+  padding: 5px 10px 10px;
+  position: relative;
+}
+
+.resume__container .resume .edu_ach .work .data .ta .title {
+  margin-bottom: 0;
+  color: #1e2124;
   font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .work .data .ta .title {
+    font-size: 16px;
+  }
+}
+
+.resume__container .resume .edu_ach .work .data .ta .desc .years {
+  font-size: 0.8rem;
+  color: #4d4d4d;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .work .data .ta .desc .years {
+    font-size: 0.7rem;
+  }
+}
+
+.resume__container .resume .edu_ach .work .data .ta .desc .years span {
+  color: #1e2124;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .work .data .ta .desc .years span {
+    font-size: 0.8rem;
+  }
+}
+
+.resume__container .resume .edu_ach .work .data .ta .desc .details {
+  color: #4d4d4d;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .edu_ach .work .data .ta .desc .details {
+    font-size: 14px;
+  }
+}
+
+.resume__container .resume .edu_ach .work .data .ta ul {
+  padding-left: 1rem;
+}
+
+.resume__container .resume .title {
+  font-size: 1rem;
   font-family: "Ubuntu";
   text-align: left;
   color: #1e2124;
   margin-bottom: 1rem;
 }
 
-.resume__container .resume .row_sketch {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
+@media (max-width: 576px) {
+  .resume__container .resume .title {
+    font-size: 0.9rem;
+  }
 }
 
-.resume__container .resume .row_sketch .about_msg .languages {
+.resume__container .resume .prog_lan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+}
+
+.resume__container .resume .prog_lan .l_circle {
+  background-color: #fff;
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #1e2124;
+  top: 18px;
+  left: -17px;
+}
+
+.resume__container .resume .prog_lan .connect {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #1e2124;
+  top: 21px;
+  left: -10px;
+}
+
+.resume__container .resume .prog_lan .programming {
+  width: 100%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages {
   position: relative;
   padding-left: 10px;
   border-left: 2px solid #1e2124;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages ul {
-  padding-left: 1rem;
-  -webkit-columns: 2;
-          columns: 2;
-  list-style: none;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .others h3 {
-  margin-bottom: 0;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language {
-  padding: 1rem;
+.resume__container .resume .prog_lan .programming .about_msg .languages .language {
+  padding: 5px 10px 10px;
   width: 100%;
   border: 2px solid #1e2124;
   margin-bottom: 1rem;
   position: relative;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language h3 {
-  font-family: "Ubuntu";
-  font-size: 1.5rem;
-  color: #1e2124;
+.resume__container .resume .prog_lan .programming .about_msg .languages .language ul {
+  padding-left: 1rem;
+  -webkit-columns: 2;
+          columns: 2;
+  list-style: none;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .degree_span {
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .programming .about_msg .languages .language ul {
+    -webkit-columns: 1;
+            columns: 1;
+  }
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .others h3 {
+  margin-bottom: 0;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language h3 {
+  font-family: "Ubuntu";
+  font-size: 1.2rem;
+  color: #1e2124;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .programming .about_msg .languages .language h3 {
+    font-size: 1rem;
+  }
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .degree_span {
   font-size: 0.9rem;
   color: #284b63;
   line-height: 2rem;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .l_circle {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .l_circle {
   background-color: #fff;
   height: 8px;
   width: 8px;
   position: absolute;
   border-radius: 50%;
-  border: 1px solid #2a4e50;
+  border: 1px solid #1e2124;
   left: -17px;
-  top: 23px;
+  top: 14px;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .connect {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .connect {
   position: absolute;
   width: 10px;
   height: 2px;
-  background-color: #2a4e50;
-  top: 26px;
+  background-color: #1e2124;
+  top: 17px;
   left: -10px;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .other_parts .others_title {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .other_parts .others_title {
   font-weight: bold;
   margin: 1rem 0 0 1rem;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .other_parts ul {
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .programming .about_msg .languages .language .other_parts .others_title {
+    font-size: 1rem;
+  }
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .other_parts ul {
   -webkit-columns: 3;
           columns: 3;
   list-style: disc;
   margin-left: 1rem;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure {
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .programming .about_msg .languages .language .other_parts ul {
+    font-size: 14px;
+    -webkit-columns: 1;
+            columns: 1;
+  }
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .desc {
+  color: gray;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .programming .about_msg .languages .language .desc {
+    font-size: 14px;
+  }
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries {
+  margin-top: 1rem;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure {
   position: relative;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .library {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .library {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -610,100 +921,30 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 1rem;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .library .degree {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .library .degree {
   font-size: 0.8rem;
   color: #284b63;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar_default {
-  height: 7px;
-  width: 100%;
-  background-color: lightgray;
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .library {
+    gap: auto;
+  }
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar {
-  position: absolute;
-  background-color: #1e2124;
-  height: 7px;
-  bottom: 0;
-  width: 0;
-  cursor: pointer;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.node {
-  width: 60%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.react {
-  width: 90%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.express {
-  width: 90%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.router {
-  width: 60%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.redux {
-  width: 40%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.mongoose {
-  width: 90%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.pytorch {
-  width: 50%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.pygame {
-  width: 60%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.numpy {
-  width: 70%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.pandas {
-  width: 70%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.sql {
-  width: 80%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.mongo {
-  width: 60%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.html {
-  width: 95%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .skill_measure .progress_bar.css {
-  width: 95%;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .desc {
-  color: gray;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .libraries {
-  margin-top: 1rem;
-}
-
-.resume__container .resume .row_sketch .about_msg .languages .language .libraries .library_logo {
-  width: 5rem;
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .library .library_logo {
+  width: 4rem;
   height: 2rem;
   margin: 10px 0 0 0;
   -o-object-fit: contain;
@@ -712,38 +953,211 @@ body {
   -webkit-user-drag: none;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .libraries .library_logo.html {
-  height: 2.8rem;
-  margin-bottom: 3px;
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .library .library_logo.html {
+  height: 3rem;
+  padding-bottom: 5px;
   width: auto;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .libraries .library_logo.css {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .library .library_logo.css {
   height: 2.8rem;
+  padding-bottom: 5px;
   width: auto;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .libraries .library_logo.router {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .library .library_logo.router {
   margin-bottom: 5px;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .libraries .library_logo.sql {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .library .library_logo.sql {
   height: 2.5rem;
   margin-bottom: 3px;
   margin-top: 0px;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .lan {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar_default {
+  height: 7px;
+  width: 100%;
+  background-color: lightgray;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar {
+  position: absolute;
+  background-color: #1e2124;
+  height: 7px;
+  bottom: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.node {
+  width: 60%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.react {
+  width: 90%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.express {
+  width: 90%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.router {
+  width: 60%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.redux {
+  width: 40%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.mongoose {
+  width: 90%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.pytorch {
+  width: 50%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.pygame {
+  width: 60%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.numpy {
+  width: 70%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.pandas {
+  width: 70%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.sql {
+  width: 80%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .libraries .skill_measure .progress_bar.mongo {
+  width: 60%;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .lan {
   position: relative;
 }
 
-.resume__container .resume .row_sketch .about_msg .languages .language .lan .line {
+.resume__container .resume .prog_lan .programming .about_msg .languages .language .lan .line {
   position: absolute;
   width: 87%;
   height: 2px;
-  background-color: #2a4e50;
+  background-color: #1e2124;
   right: 0;
   top: 13px;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language.script {
+  height: auto;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language.script ul {
+  -webkit-columns: 3;
+          columns: 3;
+}
+
+.resume__container .resume .prog_lan .programming .about_msg .languages .language.ml ul {
+  list-style: disc;
+}
+
+.resume__container .resume .prog_lan .languages .title {
+  font-size: 1rem;
+  font-family: "Ubuntu";
+  text-align: left;
+  color: #1e2124;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .languages .title {
+    font-size: 0.9rem;
+  }
+}
+
+.resume__container .resume .prog_lan .languages .data {
+  padding-left: 10px;
+  border-left: 2px solid #1e2124;
+}
+
+.resume__container .resume .prog_lan .languages .data .border {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid #1e2124;
+  width: 100%;
+  padding: 5px 20px 10px;
+}
+
+.resume__container .resume .prog_lan .languages .data .border .eng_uz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.resume__container .resume .prog_lan .languages .data .border .language {
+  position: relative;
+}
+
+.resume__container .resume .prog_lan .languages .data .border .language .language_name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .languages .data .border .language .language_name {
+    font-size: 0.9rem;
+  }
+}
+
+.resume__container .resume .prog_lan .languages .data .border .language ul {
+  padding-left: 1rem;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .languages .data .border .language .level {
+    font-size: 0.9rem;
+  }
+}
+
+.resume__container .resume .prog_lan .languages .data .border .korean .level {
+  margin-bottom: 5px;
+}
+
+.resume__container .resume .prog_lan .languages .data .border .korean .desc {
+  color: #4d4d4d;
+}
+
+@media (max-width: 576px) {
+  .resume__container .resume .prog_lan .languages .data .border .korean .desc {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=about.css.map */

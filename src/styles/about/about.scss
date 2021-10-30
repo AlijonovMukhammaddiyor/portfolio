@@ -1,14 +1,18 @@
 @import "../general/general.scss";
 
 .resume__container {
-	width: 75rem;
+	width: 78rem;
 	position: relative;
 	margin: auto;
 	overflow: hidden;
 	margin: 8rem auto 5rem;
 	padding-bottom: 3rem;
-	border: 2px solid white;
+	border: 2px solid $color_dark;
 	position: relative;
+
+	@media (max-width: 1300px) {
+		width: 72rem;
+	}
 	@include media_1 {
 		width: 60rem;
 	}
@@ -22,12 +26,6 @@
 	}
 
 	@include media_4 {
-		flex-direction: column-reverse;
-		gap: 0;
-		margin-top: 8rem;
-		justify-content: center;
-		gap: 4rem;
-		height: 90vh;
 		width: 38rem;
 	}
 
@@ -43,10 +41,22 @@
 		height: 1px;
 		background-image: linear-gradient(
 			to right,
-			rgba(0, 0, 0, 1),
-			rgba(255, 255, 255, 0),
-			rgba(0, 0, 0, 1)
+			rgba(0, 0, 0, 0),
+			rgba(0, 0, 0, 0.9),
+			rgba(0, 0, 0, 0)
 		);
+
+		@include media_4 {
+			top: 8rem;
+		}
+
+		@include media_6 {
+			top: 6rem;
+		}
+
+		@include media_7 {
+			top: 5rem;
+		}
 	}
 
 	.backscript {
@@ -64,6 +74,23 @@
 		text-align: center;
 		top: 0rem;
 
+		@include media_2 {
+			left: -2rem;
+		}
+
+		@include media_4 {
+			font-size: 3rem;
+		}
+
+		@include media_6 {
+			left: -2rem;
+			font-size: 2.5rem;
+		}
+
+		@include media_7 {
+			font-size: 2rem;
+		}
+
 		h1 {
 			margin: 0;
 			padding: 0;
@@ -71,20 +98,35 @@
 	}
 
 	.resume {
-		@include flex($align: flex-start, $gap: 3rem);
+		@include flex($align: flex-start);
 		max-width: 95%;
 		margin: auto;
 		margin-top: 12rem;
 
+		@include media_2 {
+			flex-direction: column;
+		}
+
+		@include media_4 {
+			margin-top: 10rem;
+		}
+
+		@include media_6 {
+			margin-top: 9rem;
+		}
+
+		@include media_7 {
+			margin-top: 8rem;
+		}
+
 		.edu_ach {
 			@include flex($direc: column);
-			flex-basis: 45%;
-			flex-grow: 1;
+			flex-basis: 48%;
 			.row_me {
 				width: 100%;
 				.education {
 					.data {
-						border-left: 2px solid $color_blue;
+						border-left: 2px solid $color_dark;
 						padding-left: 10px;
 						position: relative;
 						@include flex($direc: column, $jus: left, $align: flex-start);
@@ -94,59 +136,45 @@
 							width: 8px;
 							position: absolute;
 							border-radius: 50%;
-							border: 1px solid $color_blue;
+							border: 1px solid $color_dark;
+							top: 18px;
+							left: -17px;
 						}
 						.connect {
 							position: absolute;
 							width: 10px;
 							height: 2px;
-							background-color: $color_blue;
-						}
-						.connect.first {
-							top: 33px;
-							left: 2px;
-						}
-
-						.connect.second {
-							top: 135px;
-							left: 2px;
-						}
-
-						.l_circle.first {
-							top: 30px;
-							left: -5px;
-						}
-
-						.l_circle.second {
-							top: 132px;
-							left: -5px;
-						}
-						.connect.third {
-							top: 493px;
-							left: 2px;
-						}
-
-						.l_circle.third {
-							top: 490px;
-							left: -5px;
+							background-color: $color_dark;
+							top: 21px;
+							left: -10px;
 						}
 
 						.chonnam,
 						.kaist,
 						.other_courses {
 							@include flex($direc: column, $align: flex-start, $gap: auto);
-							padding: 1rem;
+							padding: 5px 10px 10px;
 							width: 100%;
-							border: 2px solid $color_blue;
+							border: 2px solid $color_dark;
 							position: relative;
 
 							.year_major {
 								@include flex($jus: left);
-								font-size: 0.9rem;
+								font-size: 0.8rem;
+
+								@include media_6 {
+									font-size: 12px;
+									gap: 10px;
+									margin-top: 4px;
+								}
 
 								.major {
 									font-weight: 600;
 									font-size: 0.95rem;
+
+									@include media_6 {
+										font-size: 14px;
+									}
 								}
 							}
 
@@ -154,7 +182,7 @@
 								@include transition(0.2s);
 								cursor: pointer;
 								position: relative;
-								color: $color_blue;
+								color: $color_dark;
 								font-weight: bold;
 
 								&::after {
@@ -167,6 +195,10 @@
 									background-color: $color_dark;
 									transform-origin: 0 100%;
 									@include transition(0.3s);
+
+									@include media_6 {
+										display: none;
+									}
 								}
 
 								&:hover::after {
@@ -174,7 +206,23 @@
 								}
 								a {
 									text-decoration: none;
-									color: $color_blue;
+									color: $color_dark;
+									font-size: 1.2rem;
+									@include media_6 {
+										font-size: 1.1rem;
+									}
+								}
+
+								h2 {
+									margin: 0;
+									padding: 0;
+									@include media_6 {
+										line-height: 1rem;
+									}
+								}
+
+								a.kaist_abr {
+									display: none;
 								}
 							}
 						}
@@ -187,28 +235,34 @@
 								.course_code {
 									width: 5rem;
 								}
+
+								@include media_6 {
+									font-size: 14px;
+								}
 							}
 
 							.title {
 								margin-top: 1rem;
-								font-size: 1rem;
-								font-weight: 500;
+								font-size: 1.1rem;
+								font-weight: 600;
 								text-decoration: none;
+
+								@include media_6 {
+									font-size: 0.9rem;
+								}
 							}
 						}
 
 						.other_courses {
-							overflow: hidden;
-							height: 3.5rem;
-							@include transition(0.6s);
-							transition: background-color 0.1s ease;
-							&:hover {
-								background-color: $color_gray_text;
-								cursor: pointer;
+							.l_circle {
+								top: 12px;
+							}
+							.connect {
+								top: 15px;
 							}
 							.title {
-								font-size: 1rem;
-								font-weight: 500;
+								font-size: 1.1rem;
+								font-weight: 600;
 
 								.click {
 									font-weight: lighter;
@@ -236,6 +290,10 @@
 											background-color: $color_dark;
 											transform-origin: 0 100%;
 											@include transition(0.3s);
+
+											@include media_6 {
+												display: none;
+											}
 										}
 
 										&:hover::after {
@@ -245,26 +303,19 @@
 									.details {
 										color: $color_gray_text;
 										@include flex($jus: left);
+
+										@include media_6 {
+											gap: 10px;
+										}
 										p {
 											font-weight: 500;
 											margin-bottom: 10px;
+											@include media_6 {
+												font-size: 13px;
+											}
 										}
 									}
 								}
-							}
-						}
-						.show {
-							height: 20rem;
-							@include transition(0.6s);
-
-							.title {
-								.click {
-									display: none;
-								}
-							}
-							&:hover {
-								background-color: white;
-								cursor: auto;
 							}
 						}
 					}
@@ -274,13 +325,13 @@
 				width: 100%;
 				.data_container {
 					.data {
-						border-left: 2px solid $color_blue;
+						border-left: 2px solid $color_dark;
 						padding-left: 10px;
 						position: relative;
 						@include flex($direc: column, $align: flex-start);
 						.achievement {
 							width: 100%;
-							padding: 1rem;
+							padding: 5px 10px 10px;
 							border: 2px solid $color_dark;
 							position: relative;
 							.l_circle {
@@ -289,7 +340,7 @@
 								width: 8px;
 								position: absolute;
 								border-radius: 50%;
-								border: 1px solid $color_blue;
+								border: 1px solid $color_dark;
 								top: 25px;
 								left: -17px;
 							}
@@ -297,7 +348,7 @@
 								position: absolute;
 								width: 10px;
 								height: 2px;
-								background-color: $color_blue;
+								background-color: $color_dark;
 								top: 27.5px;
 								left: -10px;
 							}
@@ -306,232 +357,449 @@
 								margin-bottom: 0;
 								color: $color_dark;
 								font-size: 1.2rem;
+								font-weight: 500;
+
+								@include media_6 {
+									font-size: 1rem;
+								}
 
 								.among {
 									font-size: 1.1rem;
-									color: $color_hover;
+									color: $color_dark;
+
+									@include media_6 {
+										font-size: 14px;
+									}
 								}
 							}
 							.details {
 								@include flex($jus: left);
+
+								@include media_6 {
+									gap: 10px;
+								}
 								.date {
-									font-size: 0.9rem;
+									font-size: 0.8rem;
+
+									@include media_6 {
+										font-size: 12px;
+									}
 								}
 								.place {
 									font-size: 0.9rem;
 									font-weight: 600;
+
+									@include media_6 {
+										font-size: 13px;
+									}
 								}
 							}
 						}
 					}
 				}
 			}
-		}
-		.title {
-			font-size: 1.2rem;
-			font-family: "Ubuntu";
-			text-align: left;
-			color: $color_dark;
-			margin-bottom: 1rem;
-		}
 
-		.row_sketch {
-			flex-grow: 1;
-			flex-basis: 45%;
-			.about_msg {
-				.languages {
-					position: relative;
+			.work {
+				.l_circle {
+					background-color: #fff;
+					height: 8px;
+					width: 8px;
+					position: absolute;
+					border-radius: 50%;
+					border: 1px solid $color_dark;
+					top: 18px;
+					left: -17px;
+				}
+				.connect {
+					position: absolute;
+					width: 10px;
+					height: 2px;
+					background-color: $color_dark;
+					top: 21px;
+					left: -10px;
+				}
+				.data {
 					padding-left: 10px;
 					border-left: 2px solid $color_dark;
-
-					ul {
-						padding-left: 1rem;
-						columns: 2;
-						list-style: none;
-					}
-					.others h3 {
-						margin-bottom: 0;
-					}
-
-					.language {
-						padding: 1rem;
-						width: 100%;
+					@include flex($direc: column, $align: left);
+					.ta {
 						border: 2px solid $color_dark;
-						margin-bottom: 1rem;
+						padding: 5px 10px 10px;
 						position: relative;
-						// border-radius: 10px;
-
-						h3 {
-							font-family: "Ubuntu";
-							font-size: 1.5rem;
+						.title {
+							margin-bottom: 0;
 							color: $color_dark;
-						}
+							font-size: 1.2rem;
+							font-weight: 500;
 
-						.degree_span {
-							font-size: 0.9rem;
-							color: $color_hover;
-							line-height: 2rem;
-						}
-
-						.l_circle {
-							background-color: #fff;
-							height: 8px;
-							width: 8px;
-							position: absolute;
-							border-radius: 50%;
-							border: 1px solid $color_blue;
-							left: -17px;
-							top: 23px;
-						}
-
-						.connect {
-							position: absolute;
-							width: 10px;
-							height: 2px;
-							background-color: $color_blue;
-							top: 26px;
-							left: -10px;
-						}
-
-						.other_parts {
-							.others_title {
-								font-weight: bold;
-								margin: 1rem 0 0 1rem;
-							}
-							ul {
-								columns: 3;
-								list-style: disc;
-								margin-left: 1rem;
-							}
-						}
-
-						.skill_measure {
-							position: relative;
-							// @include flex($jus: left);
-
-							.library {
-								@include flex($align: flex-end);
-								.degree {
-									font-size: 0.8rem;
-									color: $color_hover;
-								}
-							}
-
-							.progress_bar_default {
-								height: 7px;
-
-								// border-radius: 10px;
-								width: 100%;
-								background-color: $color_lightgray;
-							}
-
-							.progress_bar {
-								position: absolute;
-								background-color: $color_dark;
-								height: 7px;
-								// border-radius: 10px;
-								bottom: 0;
-								width: 0;
-								cursor: pointer;
-							}
-
-							.progress_bar.node {
-								width: 60%;
-							}
-
-							.progress_bar.react {
-								width: 90%;
-							}
-
-							.progress_bar.express {
-								width: 90%;
-							}
-
-							.progress_bar.router {
-								width: 60%;
-							}
-
-							.progress_bar.redux {
-								width: 40%;
-							}
-
-							.progress_bar.mongoose {
-								width: 90%;
-							}
-
-							.progress_bar.pytorch {
-								width: 50%;
-							}
-							.progress_bar.pygame {
-								width: 60%;
-							}
-							.progress_bar.numpy {
-								width: 70%;
-							}
-							.progress_bar.pandas {
-								width: 70%;
-							}
-							.progress_bar.sql {
-								width: 80%;
-							}
-							.progress_bar.mongo {
-								width: 60%;
-							}
-							.progress_bar.html {
-								width: 95%;
-							}
-							.progress_bar.css {
-								width: 95%;
+							@include media_6 {
+								font-size: 16px;
 							}
 						}
 
 						.desc {
-							color: $color_gray_text;
-						}
+							.years {
+								font-size: 0.8rem;
+								color: $color_text_secondary;
+								margin-bottom: 10px;
 
-						.libraries {
-							margin-top: 1rem;
+								@include media_6 {
+									font-size: 0.7rem;
+								}
+								span {
+									color: $color_dark;
+									font-size: 0.9rem;
+									font-weight: 600;
 
-							.library_logo {
-								width: 5rem;
-								height: 2rem;
-								margin: 10px 0 0 0;
-								object-fit: contain;
-								cursor: pointer;
-								-webkit-user-drag: none;
+									@include media_6 {
+										font-size: 0.8rem;
+									}
+								}
 							}
 
-							.library_logo.html {
-								height: 2.8rem;
-								margin-bottom: 3px;
-								width: auto;
-							}
-							.library_logo.css {
-								height: 2.8rem;
-								width: auto;
-								margin-bottom: 3px;
-							}
+							.details {
+								color: $color_text_secondary;
 
-							.library_logo.router {
-								margin-bottom: 5px;
-							}
-							.library_logo.sql {
-								height: 2.5rem;
-								margin-bottom: 3px;
-								margin-top: 0px;
+								@include media_6 {
+									font-size: 14px;
+								}
 							}
 						}
 
-						.lan {
+						ul {
+							padding-left: 1rem;
+						}
+					}
+				}
+			}
+		}
+		.title {
+			font-size: 1rem;
+			font-family: "Ubuntu";
+			text-align: left;
+			color: $color_dark;
+			margin-bottom: 1rem;
+
+			@include media_6 {
+				font-size: 0.9rem;
+			}
+		}
+
+		.prog_lan {
+			@include flex($direc: column, $align: left);
+			flex-basis: 48%;
+
+			.l_circle {
+				background-color: #fff;
+				height: 8px;
+				width: 8px;
+				position: absolute;
+				border-radius: 50%;
+				border: 1px solid $color_dark;
+				top: 18px;
+				left: -17px;
+			}
+			.connect {
+				position: absolute;
+				width: 10px;
+				height: 2px;
+				background-color: $color_dark;
+				top: 21px;
+				left: -10px;
+			}
+
+			.programming {
+				width: 100%;
+				.about_msg {
+					.languages {
+						position: relative;
+						padding-left: 10px;
+						border-left: 2px solid $color_dark;
+
+						.language {
+							padding: 5px 10px 10px;
+							width: 100%;
+							border: 2px solid $color_dark;
+							margin-bottom: 1rem;
 							position: relative;
 
-							.line {
+							ul {
+								padding-left: 1rem;
+								columns: 2;
+								list-style: none;
+
+								@include media_6 {
+									columns: 1;
+								}
+							}
+							.others h3 {
+								margin-bottom: 0;
+							}
+
+							h3 {
+								font-family: "Ubuntu";
+								font-size: 1.2rem;
+								color: $color_dark;
+								margin-bottom: 5px;
+
+								@include media_6 {
+									font-size: 1rem;
+								}
+							}
+
+							.degree_span {
+								font-size: 0.9rem;
+								color: $color_hover;
+								line-height: 2rem;
+							}
+
+							.l_circle {
+								background-color: #fff;
+								height: 8px;
+								width: 8px;
 								position: absolute;
-								width: 87%;
+								border-radius: 50%;
+								border: 1px solid $color_dark;
+								left: -17px;
+								top: 14px;
+							}
+
+							.connect {
+								position: absolute;
+								width: 10px;
 								height: 2px;
-								background-color: $color_blue;
-								right: 0;
-								top: 13px;
+								background-color: $color_dark;
+								top: 17px;
+								left: -10px;
+							}
+
+							.other_parts {
+								.others_title {
+									font-weight: bold;
+									margin: 1rem 0 0 1rem;
+
+									@include media_6 {
+										font-size: 1rem;
+									}
+								}
+								ul {
+									columns: 3;
+									list-style: disc;
+									margin-left: 1rem;
+
+									@include media_6 {
+										font-size: 14px;
+										columns: 1;
+									}
+								}
+							}
+
+							.desc {
+								color: $color_gray_text;
+
+								@include media_6 {
+									font-size: 14px;
+								}
+							}
+
+							.libraries {
+								margin-top: 1rem;
+
+								.skill_measure {
+									position: relative;
+
+									.library {
+										@include flex($align: baseline);
+										.degree {
+											font-size: 0.8rem;
+											color: $color_hover;
+											height: min-content;
+										}
+
+										@include media_6 {
+											gap: auto;
+										}
+
+										.library_logo {
+											width: 4rem;
+											height: 2rem;
+											margin: 10px 0 0 0;
+											object-fit: contain;
+											cursor: pointer;
+											-webkit-user-drag: none;
+										}
+
+										.library_logo.html {
+											height: 3rem;
+											padding-bottom: 5px;
+											// margin-bottom: 3px;
+											width: auto;
+										}
+										.library_logo.css {
+											height: 2.8rem;
+											padding-bottom: 5px;
+											width: auto;
+											margin-bottom: 8px;
+										}
+
+										.library_logo.router {
+											margin-bottom: 5px;
+										}
+										.library_logo.sql {
+											height: 2.5rem;
+											margin-bottom: 3px;
+											margin-top: 0px;
+										}
+									}
+
+									.progress_bar_default {
+										height: 7px;
+										width: 100%;
+										background-color: $color_lightgray;
+									}
+
+									.progress_bar {
+										position: absolute;
+										background-color: $color_dark;
+										height: 7px;
+										// border-radius: 10px;
+										bottom: 0;
+										width: 0;
+										cursor: pointer;
+									}
+
+									.progress_bar.node {
+										width: 60%;
+									}
+
+									.progress_bar.react {
+										width: 90%;
+									}
+
+									.progress_bar.express {
+										width: 90%;
+									}
+
+									.progress_bar.router {
+										width: 60%;
+									}
+
+									.progress_bar.redux {
+										width: 40%;
+									}
+
+									.progress_bar.mongoose {
+										width: 90%;
+									}
+
+									.progress_bar.pytorch {
+										width: 50%;
+									}
+									.progress_bar.pygame {
+										width: 60%;
+									}
+									.progress_bar.numpy {
+										width: 70%;
+									}
+									.progress_bar.pandas {
+										width: 70%;
+									}
+									.progress_bar.sql {
+										width: 80%;
+									}
+									.progress_bar.mongo {
+										width: 60%;
+									}
+								}
+							}
+
+							.lan {
+								position: relative;
+
+								.line {
+									position: absolute;
+									width: 87%;
+									height: 2px;
+									background-color: $color_dark;
+									right: 0;
+									top: 13px;
+								}
+							}
+						}
+						.language.script {
+							height: auto;
+							ul {
+								columns: 3;
+							}
+						}
+
+						.language.ml {
+							ul {
+								list-style: disc;
+							}
+						}
+					}
+				}
+			}
+
+			.languages {
+				.title {
+					font-size: 1rem;
+					font-family: "Ubuntu";
+					text-align: left;
+					color: $color_dark;
+					margin-bottom: 1rem;
+
+					@include media_6 {
+						font-size: 0.9rem;
+					}
+				}
+				.data {
+					padding-left: 10px;
+					border-left: 2px solid $color_dark;
+
+					.border {
+						position: relative;
+						@include flex($direc: column, $align: left);
+						border: 2px solid $color_dark;
+						width: 100%;
+						padding: 5px 20px 10px;
+						.eng_uz {
+							@include flex($align: left, $direc: column);
+						}
+						.language {
+							position: relative;
+							.language_name {
+								font-size: 1rem;
+								font-weight: 600;
+
+								@include media_6 {
+									font-size: 0.9rem;
+								}
+							}
+
+							ul {
+								padding-left: 1rem;
+							}
+
+							.level {
+								@include media_6 {
+									font-size: 0.9rem;
+								}
+							}
+						}
+
+						.korean {
+							.level {
+								margin-bottom: 5px;
+							}
+
+							.desc {
+								color: $color_text_secondary;
+
+								@include media_6 {
+									font-size: 14px;
+								}
 							}
 						}
 					}

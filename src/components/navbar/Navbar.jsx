@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from "react";
 import "../../styles/navbar/navbar.css";
-import m_icon from "../../assets/m_logo-removebg-preview (1).png";
+import m_icon from "../../assets/m_icon-removebg-preview.png";
 import { FaGithub, FaLinkedin, FaFacebook, FaTelegram } from "react-icons/fa";
 
 export default function Navbar() {

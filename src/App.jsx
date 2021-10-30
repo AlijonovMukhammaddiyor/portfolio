@@ -11,7 +11,8 @@ export default function App() {
 		<div className="app__container">
 			<Navbar />
 			{/* <Home /> */}
-			<About />
+			{/* <About /> */}
+			<Projects />
 			<Footer />
 		</div>
 	);

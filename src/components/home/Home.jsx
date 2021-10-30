@@ -6,7 +6,7 @@ import banner from "../../assets/banner1.png";
 import Typist from "react-typist";
 
 export default function Home() {
-	const names = ["Full-stack Developer", "Student", "AI Enthusiast"];
+	const names = ["Full-stack Developer", "Student", "ML Enthusiast"];
 
 	const [count, setCount] = useState(1);
 	let who = 0;

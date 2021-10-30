@@ -1,0 +1,308 @@
+@import "../general/general.scss";
+
+.projects__container {
+	width: 70rem;
+	margin: 8rem auto;
+	position: relative;
+
+	@include media_1 {
+		width: 60rem;
+	}
+
+	@include media_2 {
+		width: 50rem;
+	}
+
+	@include media_3 {
+		width: 45rem;
+	}
+
+	@include media_4 {
+		width: 38rem;
+	}
+
+	@include media_5 {
+		width: 90%;
+	}
+	.title {
+		font-size: 5rem;
+		color: $color_back;
+		top: 0rem;
+		width: 100%;
+		margin: auto;
+		text-align: center;
+		font-family: "Lobster";
+	}
+	hr {
+		border: 0;
+		width: 100%;
+		height: 1px;
+		margin-top: 1rem;
+		background-image: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0),
+			rgba(0, 0, 0, 0.9),
+			rgba(0, 0, 0, 0)
+		);
+
+		@include media_4 {
+			top: 8rem;
+		}
+
+		@include media_6 {
+			top: 6rem;
+		}
+
+		@include media_7 {
+			top: 5rem;
+		}
+	}
+
+	.title_up {
+		position: absolute;
+		top: 6rem;
+		width: 100%;
+		font-family: "Lobster";
+		text-align: center;
+		font-size: 1.3rem;
+	}
+
+	.projects {
+		@include flex($direc: column, $gap: 7rem);
+		width: 100%;
+		// overflow: hidden;
+		margin-top: 5rem;
+
+		.project {
+			padding: 10px;
+			display: grid;
+			grid-template-columns: 1fr 100px 200px 1fr;
+			grid-template-rows: 1fr;
+			align-items: center;
+			justify-content: center;
+			.image {
+				cursor: pointer;
+				grid-column: 2/-1;
+				position: relative;
+				z-index: 2;
+				grid-row: 1;
+				display: grid;
+				grid-template-columns: 2rem 1fr 1rem 1rem;
+				grid-template-rows: 2rem 20rem 2rem 2rem;
+				height: 26rem;
+				@include transition;
+				// overflow: hidden;
+				.home {
+					grid-row: 1/3;
+					position: relative;
+					z-index: 8;
+					grid-column: 1/3;
+					@include transition;
+					transform-origin: 0 0;
+					&:hover {
+						transform: scale(1.03);
+					}
+				}
+
+				.home.behind {
+					grid-row: 2/-1;
+					position: relative;
+					grid-column: 2/-1;
+					z-index: 7;
+
+					&:hover {
+						transform: scale(1);
+					}
+				}
+
+				.blog {
+					grid-row: 1/3;
+					transform-origin: 0 0;
+					position: relative;
+					z-index: 8;
+					@include transition;
+					grid-column: 1/3;
+					&:hover {
+						transform: scale(1.03);
+					}
+				}
+
+				.blog.behind {
+					grid-row: 2/-1;
+					position: relative;
+					grid-column: 2/-1;
+					z-index: 7;
+					&:hover {
+						transform: scale(1);
+					}
+				}
+				img {
+					width: 100%;
+					height: auto;
+					object-fit: cover;
+					box-shadow: 0 0 10px $color_lightgray, 5px 5px 5px hsl(0, 0%, 70%);
+					border-radius: 8px;
+				}
+			}
+			.details {
+				grid-row: 1;
+				grid-column: 1/3;
+				position: relative;
+				grid-auto-rows: 30rem;
+				padding: 2rem;
+				height: 30rem;
+				box-shadow: inset 0 0 10px hsl(0, 0%, 93%);
+				border-radius: 10px;
+				.project_logo {
+					.featured {
+						color: green;
+						font-size: small;
+					}
+					h2 {
+						font-family: "Kalam";
+						font-size: 2rem;
+					}
+				}
+
+				.desc {
+					width: 92%;
+					z-index: 100;
+					position: relative;
+					background-color: #0f4c5c;
+					color: $color_white;
+					padding: 10px;
+					border-radius: 5px;
+					font-family: "Poppins";
+					font-size: 14.8px;
+					min-height: 10rem;
+					box-shadow: 0px 10px 10px lightgray;
+
+					ul {
+						padding-left: 1rem;
+						span {
+							font-family: "Kalam";
+							font-size: 1.2rem;
+						}
+						a {
+							color: white;
+						}
+					}
+				}
+
+				.technologies {
+					margin-top: 1rem;
+					width: 83%;
+					@include flex;
+					gap: 5px;
+					justify-content: left;
+					flex-wrap: wrap;
+
+					p {
+						padding: 6px 10px;
+						// background-color: lightgray;
+						box-shadow: 2px 2px 5px black;
+						// color: white;
+						font-size: small;
+						// border-radius: 5px;
+					}
+				}
+
+				.redirect {
+					@include flex($jus: left);
+					width: 100%;
+					margin-top: 0px;
+					.icon {
+						font-size: 1.3rem;
+						color: green;
+						@include transition(0.2s);
+						cursor: pointer;
+
+						&:hover {
+							transform: scale(1.3);
+						}
+					}
+
+					.github {
+						color: rgb(90, 6, 90);
+						margin-right: 14px;
+					}
+
+					button {
+						// border: 2px solid $color_white;
+						box-shadow: 0 0 5px black;
+						cursor: pointer;
+						border: none;
+						background-color: black;
+						font-size: 1rem;
+						color: white;
+						transform-origin: 50% 50%;
+						padding: 8px 12px;
+						@include transition(0.2s);
+						&:hover {
+							transform: scale(1.1);
+						}
+					}
+				}
+			}
+		}
+		.bloghub {
+			.image {
+				display: grid;
+				grid-template-columns: 2rem 1fr 1rem 1rem;
+				grid-template-rows: 2rem 20rem 2rem 2rem;
+				height: 26rem;
+				.home {
+					grid-row: 1/3;
+					position: relative;
+					z-index: 8;
+					grid-column: 1/3;
+					@include transition;
+					transform-origin: 0 0;
+					&:hover {
+						transform: scale(1.03);
+					}
+				}
+
+				.home.behind {
+					grid-row: 2/-1;
+					position: relative;
+					grid-column: 2/-1;
+					z-index: 7;
+
+					&:hover {
+						transform: scale(1);
+					}
+				}
+
+				.blog {
+					grid-row: 1/3;
+					transform-origin: 0 0;
+					position: relative;
+					z-index: 8;
+					@include transition;
+					grid-column: 1/3;
+					&:hover {
+						transform: scale(1.03);
+					}
+				}
+
+				.blog.behind {
+					grid-row: 2/-1;
+					position: relative;
+					grid-column: 2/-1;
+					z-index: 7;
+					&:hover {
+						transform: scale(1);
+					}
+				}
+			}
+			.details {
+				height: max-content;
+
+				.redirect {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
