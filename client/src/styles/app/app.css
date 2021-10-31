@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans";
+  overflow: hidden;
+}
+
+.app__container {
+  overflow: hidden;
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,7 @@
+@import "../../general/general";
+
+@mixin media_1200 {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
