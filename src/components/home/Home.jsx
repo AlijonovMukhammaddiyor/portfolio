@@ -4,6 +4,7 @@ import "../../styles/home/heom.css";
 // import boy from "../../assets/profile-boy-removebg-preview.png";
 import banner from "../../assets/banner1.png";
 import Typist from "react-typist";
+import { Bounce } from "react-reveal";
 
 export default function Home() {
 	const names = ["Full-stack Developer", "Student", "ML Enthusiast"];
@@ -22,45 +23,50 @@ export default function Home() {
 				blob
 			</object> */}
 			{/* <div className="back_pattern third"></div> */}
-			<div className="intro">
-				<div className="back_pattern hello">
-					<p>HeLLO</p>
-				</div>
-				<h1 className="title">I am</h1>
-				<div className="me">
-					<h1 className="title name">Mukhammaddiyor</h1>
-				</div>
 
-				{count && (
-					<Typist
-						avgTypingDelay={40}
-						startDelay={0}
-						cursor={{ show: false }}
-						onTypingDone={() => setCount(0)}
-					>
-						<div className={who === 2 ? "who ml" : who === 1 ? "who st" : "who fsd"}>
-							{names.map((name, index) => {
-								return (
-									<h1 key={index}>
-										{name}
-										<Typist.Backspace count={name.length} delay={3000} />
-									</h1>
-								);
-							})}
-						</div>
-					</Typist>
-				)}
+			<Bounce left duration={1500}>
+				<div className="intro">
+					<div className="back_pattern hello">
+						<p>HeLLO</p>
+					</div>
+					<h1 className="title">I am</h1>
+					<div className="me">
+						<h1 className="title name">Mukhammaddiyor</h1>
+					</div>
 
-				<p className="bio">
-					I love to code and make beautiful things. Currently being a student majoring in Computer
-					Science at KAIST, I really look forward to contributing to and making real world projects
-					which can have a meningful influence on the lives of those around me.
-				</p>
-				{/* <div className="button-dld"> */}
-				<button className="download">Download Resume</button>
-				{/* </div> */}
-			</div>
-			<img src={banner} className="banner" alt="" />
+					{count && (
+						<Typist
+							avgTypingDelay={40}
+							startDelay={0}
+							cursor={{ show: false }}
+							onTypingDone={() => setCount(0)}
+						>
+							<div className={who === 2 ? "who ml" : who === 1 ? "who st" : "who fsd"}>
+								{names.map((name, index) => {
+									return (
+										<h1 key={index}>
+											{name}
+											<Typist.Backspace count={name.length} delay={3000} />
+										</h1>
+									);
+								})}
+							</div>
+						</Typist>
+					)}
+
+					<p className="bio">
+						I love to code and make beautiful things. Currently being a student majoring in Computer
+						Science at KAIST, I really look forward to contributing to and making real world
+						projects which can have a meningful influence on the lives of those around me.
+					</p>
+					{/* <div className="button-dld"> */}
+					<button className="download">Download Resume</button>
+					{/* </div> */}
+				</div>
+			</Bounce>
+			<Bounce right duration={1500}>
+				<img src={banner} className="banner" alt="" />
+			</Bounce>
 		</div>
 	);
 }

@@ -2,10 +2,10 @@
 
 .contact__container {
 	position: relative;
-	height: 89vh;
+	height: 79vh;
 	width: 72rem;
 	margin: auto;
-	padding-top: 6rem;
+	margin-top: 6rem;
 
 	@include media_1 {
 		width: 60rem;
@@ -32,6 +32,8 @@
 		width: 100%;
 		text-align: left;
 		font-family: "Lobster";
+		position: relative;
+		z-index: -1;
 
 		.back {
 			color: $color_back;
@@ -45,9 +47,10 @@
 
 		.title_up {
 			position: absolute;
-			top: 9rem;
+			top: 3rem;
+			z-index: 1;
 			@include media_6 {
-				top: 8rem;
+				top: 1.5rem;
 			}
 			@include media_7 {
 				font-size: 13px;
@@ -59,6 +62,7 @@
 	.data {
 		@include flex;
 		position: relative;
+		z-index: 0;
 		@include media_4 {
 			flex-direction: column;
 			margin-bottom: 3rem;
@@ -83,6 +87,8 @@
 					object-position: left;
 					border-radius: 50%;
 					object-fit: contain;
+					position: relative;
+					z-index: 0;
 				}
 				.name_job {
 					.name {

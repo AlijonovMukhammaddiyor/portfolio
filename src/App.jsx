@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import Projects from "./components/Project/Projects";
 import Contact from "./components/Contact/Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
+import { Bounce } from "react-reveal";
 
 export default function App() {
 	return (
@@ -28,7 +29,9 @@ export default function App() {
 					</Route>
 				</Switch>
 			</Router>
-			<Footer />
+			<Bounce bottom duration={1500}>
+				<Footer />
+			</Bounce>
 		</div>
 	);
 }
