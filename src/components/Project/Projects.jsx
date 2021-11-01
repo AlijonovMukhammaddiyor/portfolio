@@ -5,6 +5,7 @@ import bloghub_blogs from "../../assets/bloghub_blogs.png";
 import portfolio from "../../assets/portfolio.png";
 import { FiGithub } from "react-icons/fi";
 import { Bounce } from "react-reveal";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
 	const [blog, setBlog] = useState(true);
@@ -61,7 +62,9 @@ export default function Projects() {
 								<p>axios</p>
 							</div>
 							<div className="redirect">
-								<button>View the site</button>
+								<a href="https://bloghubs.herokuapp.com/" target="_blank" rel="noreferrer">
+									View the site
+								</a>
 								<FiGithub className="icon github" />
 							</div>
 						</div>
@@ -111,7 +114,10 @@ export default function Projects() {
 								<p>Sass</p>
 							</div>
 							<div className="redirect">
-								<button>View the site</button>
+								<a href="https://mukhammaddiyor.herokuapp.com/" target="_blank" rel="noreferrer">
+									View the site
+								</a>
+
 								<FiGithub className="icon github" />
 							</div>
 						</div>
