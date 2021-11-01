@@ -36,7 +36,7 @@ export default function Contact() {
 					setState({ email: "", subject: "", message: "" });
 				},
 				(error) => {
-					console.log(error.text);
+					console.log(error);
 					setSuccess(false);
 				}
 			);
