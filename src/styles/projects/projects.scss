@@ -253,9 +253,11 @@
 					.github {
 						color: rgb(90, 6, 90);
 						margin-right: 14px;
+						background-color: white;
+						box-shadow: none;
 					}
 
-					a {
+					.view {
 						// border: 2px solid $color_white;
 						box-shadow: 0 0 5px black;
 						cursor: pointer;
@@ -378,6 +380,39 @@
 			}
 		}
 		.portfolio {
+			.image {
+				height: min-content;
+				img {
+					@include transition;
+					transform-origin: 0 0;
+					&:hover {
+						transform: scale(1.03);
+					}
+
+					@include media_2 {
+						transform-origin: 50% 50%;
+
+						&:hover {
+							transform: scale(1);
+						}
+					}
+				}
+			}
+
+			.details {
+				@include media_2 {
+					.desc {
+						min-height: auto;
+					}
+				}
+
+				.redirect {
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.tracker {
 			.image {
 				height: min-content;
 				img {

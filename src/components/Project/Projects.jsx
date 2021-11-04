@@ -5,7 +5,7 @@ import bloghub_blogs from "../../assets/bloghub_blogs.png";
 import portfolio from "../../assets/portfolio.png";
 import { FiGithub } from "react-icons/fi";
 import { Bounce } from "react-reveal";
-import { Link } from "react-router-dom";
+import tracker from "../../assets/Screen Shot 2021-11-05 at 1.12.37 AM.png";
 
 export default function Projects() {
 	const [blog, setBlog] = useState(true);
@@ -62,10 +62,21 @@ export default function Projects() {
 								<p>axios</p>
 							</div>
 							<div className="redirect">
-								<a href="https://bloghubs.herokuapp.com/" target="_blank" rel="noreferrer">
+								<a
+									className="view"
+									href="https://bloghubs.herokuapp.com/"
+									target="_blank"
+									rel="noreferrer"
+								>
 									View the site
 								</a>
-								<FiGithub className="icon github" />
+								<a
+									href="https://github.com/AlijonovMukhammaddiyor"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<FiGithub className="icon github" />
+								</a>
 							</div>
 						</div>
 						<div className="image_out">
@@ -114,11 +125,22 @@ export default function Projects() {
 								<p>Sass</p>
 							</div>
 							<div className="redirect">
-								<a href="https://mukhammaddiyor.herokuapp.com/" target="_blank" rel="noreferrer">
+								<a
+									className="view"
+									href="https://mukhammaddiyor.herokuapp.com/"
+									target="_blank"
+									rel="noreferrer"
+								>
 									View the site
 								</a>
 
-								<FiGithub className="icon github" />
+								<a
+									href="https://github.com/AlijonovMukhammaddiyor"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<FiGithub className="icon github" />
+								</a>
 							</div>
 						</div>
 						<div className="image">
@@ -126,6 +148,51 @@ export default function Projects() {
 						</div>
 						<div className="project_title">
 							<h2>Portfolio</h2>
+							<p className="featured">Featured Project</p>
+						</div>
+					</div>
+				</Bounce>
+				<Bounce bottom duration={1500}>
+					<div className="project tracker">
+						<div className="details">
+							<div className="project_logo">
+								<p className="featured">Featured Project</p>
+								<h2>TrackIt</h2>
+							</div>
+							<div className="desc">
+								A website to track changes in cryptocurrencies. Users can search and filter
+								cryptocurrencies according to their names while it is possible to sort them in any
+								order.
+							</div>
+							<div className="technologies">
+								<p>React Js</p>
+								<p>APIs</p>
+								<p>Sass</p>
+							</div>
+							<div className="redirect">
+								<a
+									className="view"
+									href="https://trackit-crypto.herokuapp.com/"
+									target="_blank"
+									rel="noreferrer"
+								>
+									View the site
+								</a>
+
+								<a
+									href="https://github.com/AlijonovMukhammaddiyor"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<FiGithub className="icon github" />
+								</a>
+							</div>
+						</div>
+						<div className="image">
+							<img src={tracker} alt="" />
+						</div>
+						<div className="project_title">
+							<h2>TrackIt</h2>
 							<p className="featured">Featured Project</p>
 						</div>
 					</div>

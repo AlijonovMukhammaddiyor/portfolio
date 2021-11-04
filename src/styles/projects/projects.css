@@ -409,9 +409,12 @@ body {
 .projects__container .projects .project .details .redirect .github {
   color: #5a065a;
   margin-right: 14px;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-.projects__container .projects .project .details .redirect a {
+.projects__container .projects .project .details .redirect .view {
   -webkit-box-shadow: 0 0 5px black;
           box-shadow: 0 0 5px black;
   cursor: pointer;
@@ -427,7 +430,7 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.projects__container .projects .project .details .redirect a:hover {
+.projects__container .projects .project .details .redirect .view:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -621,6 +624,45 @@ body {
 }
 
 .projects__container .projects .portfolio .details .redirect {
+  margin-top: 20px;
+}
+
+.projects__container .projects .tracker .image {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.projects__container .projects .tracker .image img {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.projects__container .projects .tracker .image img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+@media (max-width: 992px) {
+  .projects__container .projects .tracker .image img {
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  .projects__container .projects .tracker .image img:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (max-width: 992px) {
+  .projects__container .projects .tracker .details .desc {
+    min-height: auto;
+  }
+}
+
+.projects__container .projects .tracker .details .redirect {
   margin-top: 20px;
 }
 /*# sourceMappingURL=projects.css.map */
